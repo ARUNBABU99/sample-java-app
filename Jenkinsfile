@@ -6,14 +6,11 @@ pipeline {
         jdk "jdk-17"
     }
 
-    environment {
-        SONARQUBE = credentials('jenkins-token') // optional if using token creds
-    }
 
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/ARUNBABU99/sample-java-app.git', branch: 'main'
+                git url: 'https://github.com/ARUNBABU99/sample-java-app.git', branch: 'master'
             }
         }
 
